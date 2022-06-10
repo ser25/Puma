@@ -32,13 +32,14 @@ h6 {
   font-size: inherit;
 }
 
+/*-------------------------------------------variables------------------------------------------------------------------------*/
 html,
 body {
   height: 100%;
-  line-height: 1.56;
+  line-height: 1.6;
   background: #FFFFFF;
-  font-size: 18px;
-  color: #6B7280;
+  font-size: 16px;
+  color: #1A0A03;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
 }
@@ -56,13 +57,81 @@ body {
 }
 
 [class*="__container"] {
-  max-width: 1170px;
+  max-width: 1179px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 /*-------------------------------adaptivValue----------------------------------------------------------------------*/
-/*-------------------------------------------variables------------------------------------------------------------------------*/
-.h1 {
-  font-family: "Source Serif Pro", serif;
+/*----------------------------------------------------Header-----------------------------------------------------------------------------*/
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-height: 99px;
+}
+
+.header__logo {
+  padding-bottom: 8px;
+  padding-right: 101px;
+}
+
+@media (max-width: 1200px) {
+  .header__logo {
+    padding-right: calc(20px + 81 * ((100vw - 320px) / 850));
+  }
+}
+
+.header__menu {
+  padding-bottom: 17px;
+  padding-right: 477px;
+}
+
+@media (max-width: 1200px) {
+  .header__menu {
+    padding-right: 238.5px;
+  }
+}
+
+.header__button {
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  min-width: 59px;
+  background-color: #EE5514;
+  padding: 15px 30px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__button:hover {
+  color: #EE5514;
+  background-color: #FFFFFF;
+}
+
+.menu__nav-bar {
+  width: 332px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__link {
+  opacity: 0.7;
+  color: inherit;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.menu__link:hover {
+  color: #EE5514;
 }
