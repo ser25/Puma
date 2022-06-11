@@ -176,10 +176,8 @@ body._lock {
   }
 }
 
-@media (max-width: 939.97px) {
-  .header__logo .path-burger {
-    fill: #FFFFFF;
-  }
+.header__logo ._fillWhite {
+  fill: #FFFFFF;
 }
 
 .header__container {

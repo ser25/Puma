@@ -172,12 +172,11 @@ body._lock{
         }
     }
     &__logo{
-        @media (max-width: 939.97px){
-            .path-burger{
-                fill: $White;
-            }
-        }         
-    }
+        ._fillWhite{
+            fill: $White;
+        }  
+        }       
+    
     &__container {
         justify-content: space-between;
         align-items: center;
