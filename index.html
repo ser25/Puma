@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
     <title>Puma</title>
     <link rel="stylesheet" href="css/styly.css">
+
 </head>
 <body>
     <div class="wrapper">
@@ -23,21 +28,21 @@
                         <nav class="menu__nav-bar">
                             <ul class="menu__list">
                              <li class="menu__item">
-                                 <a href="#" class="menu__link">Menu</a>
+                                 <a href="" class="menu__link">Menu</a>
                              </li>
                              <li class="menu__item">
-                                 <a href="#" class="menu__link">About</a>
+                                 <a href="" class="menu__link">About</a>
                              </li>
                              <li class="menu__item">
-                                 <a href="#" class="menu__link">Feature</a>
+                                 <a href="" class="menu__link">Feature</a>
                              </li>
                              <li class="menu__item">
-                                 <a href="#" class="menu__link">Gallary</a>
+                                 <a href="" class="menu__link">Gallary</a>
                              </li>
                             </ul>
                          </nav>
                     
-                     <a href="#" class="header__button">Buy now</a>
+                     <a href="" class="header__button">Buy now</a>
                     </div>
                 </div>
                 <div class="menu__icon">
@@ -45,10 +50,52 @@
                 </div>
             </div>
         </header>
-        <main class="page"></main>
+        <main class="page">
+            <div class="page__main main">
+                <div class="main__container">
+                    <div class="main__text-content text-content">
+                        <h1 class="text-content__title">Life is better in running <span>shoes</span>. 
+                        </h1>
+                        <div class="text-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit. Egestas leo ultrices
+                        </div>
+                    </div>
+                    <!-- Оболочка слайдера -->
+                    <div class="main__slider swiper">
+                        <!-- Двигающееся часть слайдера -->
+                        <div class="main__wrapper swiper-wrapper">
+                            <!-- Слайд -->
+                            <div class="main__slide swiper-slide">
+                                <div class="main__body">
+                                    <img src="images/main/slaider.png" alt="">
+
+                                </div>
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <div class="main__body">
+                                    <img src="images/main/slaider.png" alt="">
+                                </div>
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <div class="main__body">
+                                    <img src="images/main/1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Если нужна навигация (влево/вправо) -->
+                        <button type="button" class="swiper-button-prev"></button>
+                        <button type="button" class="swiper-button-next"></button>
+                    </div>
+                </div>
+            </div>
+        </main>
         <footer class="footer"></footer>
     </div>
     <!--JS-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/burger-menu.js"></script>
+    <script src="js/app.js"></script>
+    
+    
 </body>
 </html>
