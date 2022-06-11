@@ -310,35 +310,60 @@ body._lock {
   }
 }
 
-/*------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------Main------------------------------------------------------------------------------------------*/
 .page {
   position: relative;
 }
 
 .page__main {
   padding-top: 131px;
+  padding-bottom: 117px;
 }
 
-.main__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 149px;
-  padding-bottom: 117px;
+@media (max-width: 1099.97px) {
+  .page__main {
+    padding-bottom: calc(30px + 87 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (min-width: 1100px) {
+  .main__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 149px;
+  }
 }
 
 .main__text-content {
   padding-top: 74px;
-  max-width: 366px;
+}
+
+@media (max-width: 1099.97px) {
+  .main__text-content {
+    padding-top: calc(0px + 74 * ((100vw - 320px) / 850));
+  }
 }
 
 .main__text-content *:not(:last-child) {
   margin-bottom: 20px;
 }
 
+@media (min-width: 1100px) {
+  .main__text-content {
+    max-width: 366px;
+  }
+}
+
+@media (max-width: 1099.97px) {
+  .main__text-content {
+    text-align: center;
+  }
+}
+
 .main__slider {
-  width: 625px;
-  height: 400px;
+  max-width: 625px;
+  max-height: 400px;
 }
 
 .main__body {
@@ -365,8 +390,26 @@ body._lock {
   color: #EE5514;
 }
 
+@media (max-width: 1099.97px) {
+  .text-content__title {
+    font-size: calc(40.66667px + 20.33333 * ((100vw - 320px) / 850));
+  }
+}
+
 .text-content__text {
   opacity: 0.7;
+}
+
+@media (max-width: 1099.97px) {
+  .text-content__text {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1099.97px) {
+  .text-content__text {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 850));
+  }
 }
 
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
@@ -386,7 +429,21 @@ body._lock {
   color: #EE5514;
 }
 
+@media (max-width: 1099.97px) {
+  .swiper-button-next, .swiper-button-prev {
+    width: calc(30px + 40 * ((100vw - 320px) / 850));
+    height: calc(30px + 40 * ((100vw - 320px) / 850));
+  }
+}
+
 .swiper-button-next:after, .swiper-button-prev:after {
   font-size: 24.89px;
   font-weight: 800;
+}
+
+@media (max-width: 1099.97px) {
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: calc(16px + 8.89 * ((100vw - 320px) / 850));
+    font-weight: calc(600px + 200 * ((100vw - 320px) / 850));
+  }
 }
