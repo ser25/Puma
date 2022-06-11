@@ -265,12 +265,15 @@ body._lock{
                 height: 99px;
                 width: 100%;
                 z-index: 3;
-                background-color: $Black;
+                
             }
               
         }
         &._active{
             left: 0;
+            ::before{
+                background-color: $Black;
+            }
         }
        
     }
