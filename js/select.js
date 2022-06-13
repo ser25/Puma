@@ -1,9 +1,9 @@
 let select = function(){
     const selectHeadr = document.querySelectorAll('.select-filter__header');
-    const selectBody = document.querySelector('.select-filter__items'); // вибір 
+   // const selectBody = document.querySelector('.select-filter__items'); // вибір 
     const selectSvg = document.querySelector('.select-filter__svg');
     const selectItem = document.querySelectorAll('.select-filter__item');
-    console.log(selectBody);
+    //console.log(selectBody);
 
     if(selectHeadr){
         selectHeadr.forEach(item => {
@@ -13,7 +13,7 @@ let select = function(){
             item.addEventListener('click', selectChoose)
         });
         function selectToggle() {
-            selectBody.classList.toggle('_open');
+            this.parentElement.classList.toggle('_open');
             //selectSvg.classList.toggle('_rotate');
             selectSvg.classList.toggle('_rotate');
         }
@@ -23,7 +23,7 @@ let select = function(){
                 currentText = select.querySelector('.select-filter__current');
             console.log(select);
             currentText.innerText = text;
-            selectBody.classList.remove('_open');
+            select.classList.remove('_open');
     
         }
     }

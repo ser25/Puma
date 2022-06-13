@@ -400,6 +400,8 @@ body._lock {
 }
 
 .main__slider {
+  position: relative;
+  z-index: 100;
   max-width: 625px;
   max-height: 400px;
 }
@@ -487,6 +489,20 @@ body._lock {
 }
 
 /*-------------------------------------filter--------------------------------------------------------------*/
+.page__filter {
+  padding-bottom: 140px;
+  margin-top: -76px;
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width: 1099.97px) {
+  .page__filter {
+    padding-bottom: calc(30px + 110 * ((100vw - 320px) / 850));
+    margin-top: calc(0px + -76 * ((100vw - 320px) / 850));
+  }
+}
+
 .filter__body {
   max-width: 792px;
   min-height: 125px;
@@ -494,21 +510,36 @@ body._lock {
   -webkit-box-shadow: 0px 1px 14px rgba(26, 10, 3, 0.05);
           box-shadow: 0px 1px 14px rgba(26, 10, 3, 0.05);
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .filter__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .filter__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 70px;
+}
+
+@media (max-width: 767.97px) {
+  .filter__items {
+    margin-bottom: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: calc(0px + 70 * ((100vw - 320px) / 850));
+  }
 }
 
 .filter__item {
@@ -559,6 +590,9 @@ body._lock {
 }
 
 .select-filter__items {
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: absolute;
   top: 100%;
   left: 0;
@@ -575,5 +609,9 @@ body._lock {
 }
 
 ._open {
+  display: block;
+}
+
+.select-filter._open .select-filter__items {
   display: block;
 }
