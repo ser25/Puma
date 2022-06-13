@@ -446,6 +446,111 @@ body._lock{
   }
 }
 
+/*-------------------------------------filter--------------------------------------------------------------*/
+.page {
+
+    &__filter {
+    }
+}
+.filter {
+
+    &__container {
+    }
+
+    &__body {
+        max-width: 792px;
+        min-height: 125px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 14px rgba(26, 10, 3, 0.05);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__items {
+        display: flex;
+
+
+    }
+
+    &__item {
+        min-width: 76px;
+    }
+
+    &__button {
+    }
+}
+.item-filter {
+
+    &__text {
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+
+    &__select {
+        
+    }
+}
+.select-filter {
+    position: relative;
+
+    &__header {
+        
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        min-height: 35px;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            text-decoration: 3px underline $Orange;
+        }
+        
+    }
+
+    &__current {
+        
+        align-self: flex-end;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    ._rotate{
+        transform: translateY(-100%) rotate(-180deg);
+    }
+
+    &__arrow {
+        
+        svg{
+            transform: translateY(-100%) rotate(0);
+           
+        }
+        
+        
+    }
+
+    &__items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+
+
+    }
+
+    &__item {
+        cursor: pointer;
+        &:hover{
+            background-color: #f2f2f2;
+        }
+    }
+}
+.button {
+}
+._open{
+    display: block;
+}
 
 
 
