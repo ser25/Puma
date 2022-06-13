@@ -69,10 +69,22 @@ body._lock{
     $addSize: $stratSize - $miniSize;
     #{$property}: calc(#{$miniSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 }
-
-
-
-
+/*-------------------------------------------------BEM--------------------------------------------------------------------*/
+.button{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    color: $White;
+    min-width: 59px;
+    background-color: $Orange;
+    padding: 15px 30px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    &:hover{
+        color: $Orange;
+        background-color: $White;
+    }
+}
 /*----------------------------------------------------Header-----------------------------------------------------------------------------*/
 .header {
     position: absolute;

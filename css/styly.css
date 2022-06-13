@@ -67,6 +67,25 @@ body._lock {
 }
 
 /*-------------------------------adaptivValue----------------------------------------------------------------------*/
+/*-------------------------------------------------BEM--------------------------------------------------------------------*/
+.button {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  min-width: 59px;
+  background-color: #EE5514;
+  padding: 15px 30px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  color: #EE5514;
+  background-color: #FFFFFF;
+}
+
 /*----------------------------------------------------Header-----------------------------------------------------------------------------*/
 .header {
   position: absolute;
