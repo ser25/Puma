@@ -376,18 +376,18 @@ body._lock{
             text-align: center;
         }
     }
+    &__body-slider{
+        max-width: 625px;
+        @media (max-width:1099.97px){
+            margin: 0 auto;
+        }
+    }
 
     &__slider {
         @media (min-width: 944px){
             position: relative;
             z-index: 3;    
         }
-        width: 625px;
-        @media (max-width: 679.97px){
-              max-width: 625px;
-        }
-
-
     }
 
     &__wrapper {

@@ -404,20 +404,20 @@ body._lock {
   }
 }
 
-.main__slider {
-  width: 625px;
+.main__body-slider {
+  max-width: 625px;
+}
+
+@media (max-width: 1099.97px) {
+  .main__body-slider {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 944px) {
   .main__slider {
     position: relative;
     z-index: 3;
-  }
-}
-
-@media (max-width: 679.97px) {
-  .main__slider {
-    max-width: 625px;
   }
 }
 
