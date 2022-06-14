@@ -38,6 +38,7 @@ $White: #FFFFFF;
 $SourceSerifPro: 'Source Serif Pro', serif;
 
 
+
 html,
 body{
     height: 100%;
@@ -85,6 +86,7 @@ body._lock{
         background-color: $White;
     }
 }
+
 /*----------------------------------------------------Header-----------------------------------------------------------------------------*/
 .header {
     position: absolute;
@@ -99,25 +101,14 @@ body._lock{
         display: flex;
         min-height: 99px;
         align-items: flex-end;
+        
     }
-    &__color{
-        @media (max-width:767.97px){
-              display: none;
-        }
-        @media (min-width:768px){
-            position: absolute;
-            top: 0;
-            left: 15px;
-            img{
-                max-width: 100%;
-                max-height: 100%;
-            }
-        }
 
-    }
+
+
 
     &__logo {
-        z-index: 2;
+        z-index: 100;
         
         @media (min-width: 940px){
             padding-bottom: 8px;
@@ -137,6 +128,8 @@ body._lock{
 
 
     &__button {
+        position: relative;
+        z-index: 100;
         display: flex;
         font-weight: 500;
         font-size: 18px;
@@ -153,9 +146,12 @@ body._lock{
         }
     }
 }
+
 .menu {
 
     &__nav-bar {
+        position: relative;
+        z-index: 2;
         @media (min-width: 940px){
             width: 332px;
             align-self: flex-end;   
@@ -212,7 +208,7 @@ body._lock{
         }       
     
     &__container {
-        
+
         @media (max-width: 939.97px){
         justify-content: space-between;
         align-items: center;
@@ -221,9 +217,11 @@ body._lock{
 }
 .menu{
     &__icon{
+        position: relative;
+        z-index: 100;
         display: none;
         @media (max-width: 939.97px){
-            z-index: 1000;
+            //z-index: 10000;
             display: block;
             position: relative;
             width: 30px;
@@ -279,7 +277,6 @@ body._lock{
             gap: 100px;
             flex-direction: column;
             align-items: center;
-
             position: fixed;
             top: 0;
             left: 0;
@@ -306,9 +303,10 @@ body._lock{
               
         }
         &._active{
+            z-index: 10;
             left: 0;
             ::before{
-                background-color: rgba(0, 0, 0, 0.9);
+                background-color: black
             }
         }
        
@@ -327,9 +325,10 @@ body._lock{
 
 /*------------------------------------Main------------------------------------------------------------------------------------------*/
 .page {
-    position: relative;
+
 
     &__main {
+        position: relative;
         padding-top: 131px;
         padding-bottom: 117px;
         @media (max-width: 1099.97px){
@@ -345,9 +344,21 @@ body._lock{
             display: flex;
             gap: 149px;  
         }
-
-        
+  
     }
+    &__color{
+        z-index: 1;
+        @media (max-width:943.97px){
+              display: none;
+        }
+        @media (min-width:944px){
+            position: absolute;
+            top: 0;
+        }
+    
+    }
+    
+
 
     &__text-content {
         padding-top: 74px;
@@ -367,16 +378,23 @@ body._lock{
     }
 
     &__slider {
-        position: relative;
-        z-index: 100;
-        max-width: 625px;
-        max-height: 400px;
+        @media (min-width: 944px){
+            position: relative;
+            z-index: 3;    
+        }
+        width: 625px;
+        @media (max-width: 679.97px){
+              max-width: 625px;
+        }
+
+
     }
 
     &__wrapper {
     }
 
     &__slide {
+
     }
 
     &__body {
@@ -396,6 +414,10 @@ body._lock{
 .text-content {
 
     &__title {
+        @media (min-width: 944px){
+            position: relative;
+            z-index: 3;    
+        }
         font-family: $SourceSerifPro;
         font-weight: 600;
         font-size: 61px;
@@ -411,6 +433,10 @@ body._lock{
     }
 
     &__text {
+        @media (min-width: 944px){
+            position: relative;
+            z-index: 3;    
+        }
         opacity: 0.7;
         @media (max-width: 1099.97px){
             margin-bottom:20px; 
@@ -454,8 +480,7 @@ body._lock{
     &__filter {
         padding-bottom: 140px;
         margin-top: -76px;
-        position: relative;
-        z-index: 100;
+
         @media (max-width: 1099.97px){
             @include adaptivValue(padding-bottom, 140 , 30 );
             @include adaptivValue (margin-top, -76, 0 );
@@ -469,16 +494,22 @@ body._lock{
     }
 
     &__body {
+        position: relative;
+        z-index: 3;
         max-width: 792px;
         min-height: 125px;
         background: #FFFFFF;
         box-shadow: 0px 1px 14px rgba(26, 10, 3, 0.05);
         border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
         @media (min-width:768px){
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+           
         }
+
+
 
 
     }
@@ -486,11 +517,12 @@ body._lock{
     &__items {
         display: flex;
         gap: 70px;
+        flex-wrap: wrap;
         
         @media (max-width: 767.97px){
             margin-bottom: 20px;
             justify-content: space-between;
-            @include adaptivValue(gap, 70 , 0 )    
+            @include adaptivValue(gap, 70 , 20 );    
         }
 
 
@@ -537,13 +569,12 @@ body._lock{
         font-size: 18px;
         font-weight: 500;
     }
-    ._rotate{
-        transform: translateY(-100%) rotate(-180deg);
-    }
+
 
     &__arrow {
         
         svg{
+            transition:  transform 0.3s ease 0s;
             transform: translateY(-100%) rotate(0);
            
         }
@@ -552,6 +583,7 @@ body._lock{
     }
 
     &__items {
+        
         max-height: 100px;
         overflow-y: auto;
         overflow-x: hidden;
@@ -560,24 +592,33 @@ body._lock{
         left: 0;
         right: 0;
         display: none;
-
+        
 
     }
 
     &__item {
         cursor: pointer;
+        padding: 12px 12px 12px 0;
+        transition:  background-color 0.3s ease 0s;
         &:hover{
             background-color: #f2f2f2;
+
         }
     }
 }
 .button {
 }
 ._open{
-    display: block;
+   // display: block;
 }
 .select-filter._open .select-filter__items {
     display: block;
+    position: relative;
+}
+.select-filter._rotate .select-filter__arrow  {
+    svg{
+        transform: translateY(-100%) rotate(-180deg);
+    }   
 }
 
 

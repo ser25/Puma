@@ -15,7 +15,7 @@ let select = function(){
         function selectToggle() {
             this.parentElement.classList.toggle('_open');
             //selectSvg.classList.toggle('_rotate');
-            selectSvg.classList.toggle('_rotate');
+            this.parentElement.classList.toggle('_rotate');
         }
         function selectChoose() {
             let text = this.innerText,
@@ -31,4 +31,5 @@ let select = function(){
 
 }
 select();
+
 
