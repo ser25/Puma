@@ -41,7 +41,7 @@ body {
   font-size: 16px;
   color: #1A0A03;
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body._lock {
@@ -667,4 +667,129 @@ body._lock {
 .select-filter._rotate .select-filter__arrow svg {
   -webkit-transform: translateY(-100%) rotate(-180deg);
           transform: translateY(-100%) rotate(-180deg);
+}
+
+/*---------------------------------video-----------------------------------------------------------*/
+.page__video {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 944.97px) {
+  .page__video {
+    padding-bottom: calc(30px + 110 * ((100vw - 320px) / 850));
+  }
+}
+
+.video__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 944.97px) {
+  .video__container {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.video__contant {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+}
+
+.video__contant *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 945px) {
+  .video__contant {
+    max-width: 340px;
+    padding-top: 64px;
+  }
+}
+
+.video__ephigraf {
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  color: #EE5514;
+}
+
+@media (max-width: 944.97px) {
+  .video__ephigraf {
+    font-size: calc(18px + 2 * ((100vw - 320px) / 850));
+  }
+}
+
+.video__title {
+  font-size: 44px;
+  line-height: 1.3;
+}
+
+@media (max-width: 944.97px) {
+  .video__title {
+    font-size: calc(30px + 14 * ((100vw - 320px) / 850));
+  }
+}
+
+.video__text {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  opacity: 0.7;
+}
+
+@media (max-width: 944.97px) {
+  .video__text {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 850));
+  }
+}
+
+.video__body {
+  position: relative;
+  max-width: 555px;
+  max-height: 326px;
+}
+
+.video__movie {
+  z-index: 3;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (min-width: 945px) {
+  .video__movie {
+    -webkit-transform: translateY(54px);
+            transform: translateY(54px);
+    border-radius: 15px;
+    position: relative;
+  }
+}
+
+.video__image {
+  display: none;
+}
+
+@media (min-width: 945px) {
+  .video__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  .video__image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+  }
 }

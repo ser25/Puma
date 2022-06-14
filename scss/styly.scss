@@ -36,6 +36,7 @@ $Orange: #EE5514;
 $Black: #1A0A03;
 $White: #FFFFFF;
 $SourceSerifPro: 'Source Serif Pro', serif;
+$Poppins: 'Poppins', sans-serif;
 
 
 
@@ -47,7 +48,7 @@ body{
     font-size: 16px;
     color: $Black;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: $Poppins;
     
 }
 body._lock{
@@ -637,6 +638,122 @@ body._lock{
     }   
 }
 
+/*---------------------------------video-----------------------------------------------------------*/
 
+
+.page {
+
+    &__video {
+        padding-bottom: 100px;
+        @media (max-width: 944.97px){
+            @include adaptivValue(padding-bottom, 140 , 30 );
+        }
+        
+    }
+}
+.video {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        @media (max-width: 944.97px){
+            text-align: center;
+            justify-content: center;
+              
+        }
+    }
+
+    &__contant {
+
+        font-family: $SourceSerifPro;
+        font-weight: 600;
+        & *:not(:last-child){
+            margin-bottom: 20px;
+        }
+        @media (min-width: 945px){
+            max-width: 340px;
+            padding-top: 64px;    
+        }
+        
+    }
+
+    &__ephigraf {
+        
+       
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 1.2px;
+        color: $Orange;
+        @media (max-width: 944.97px){
+            @include adaptivValue(font-size, 20 , 18 );
+        }
+    }
+
+    &__title {
+        font-size: 44px;
+        line-height: 1.3;
+        @media (max-width: 944.97px){
+            @include adaptivValue(font-size, 44 , 30 );
+        }
+
+    }
+
+    &__text {
+        font-weight: 400;
+        font-family: $Poppins;
+        opacity: 0.7;
+        @media (max-width: 944.97px){
+            @include adaptivValue(font-size, 16 , 14 );
+        }
+    }
+
+    &__body {
+        position: relative;
+        max-width: 555px;
+        max-height: 326px;
+
+    }
+
+    &__movie {
+        
+        //padding-top: 54px;
+        
+        //top: 54px;
+        
+        z-index: 3;
+        max-width: 100%;
+        max-height: 100%;
+        
+        @media (min-width: 945px){
+            transform: translateY(54px);
+            border-radius: 15px;
+            position: relative;
+        }
+
+    }
+
+    &__image {
+        display: none;
+        @media (min-width: 945px){
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(50px);
+            
+    
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                //width: 555px;
+                //height: 326px;
+                border-radius: 10px;
+            }    
+        }
+
+    }
+}
 
 
