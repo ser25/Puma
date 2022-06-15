@@ -411,6 +411,9 @@ body._lock{
             position: relative;
             z-index: 3;    
         }
+        .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+            opacity: 0; 
+        }
     }
 
     &__wrapper {
@@ -470,10 +473,7 @@ body._lock{
     }
 }
 
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-    opacity: 0;
 
-}
 .swiper-button-next, .swiper-button-prev{
     width: 70px;
     height: 70px;
@@ -876,5 +876,200 @@ body._lock{
         }
     }
 
+}
+/*------------------------------------------------gallary--------------------------------------------------------------------------------------------*/
+.page {
+
+    &__gallary {
+        padding-bottom: 140px;
+    }
+}
+.gallary {
+
+    &__container {
+        position: relative;
+    }
+
+    &__top {
+        
+        &:not(:last-child){
+            margin-bottom: 60px;
+        }
+    }
+
+    &__body-slider {
+    }
+
+    &__slider {
+
+        @media (min-width:768px){
+            position:static;
+            .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+                opacity: 0.8; 
+            }
+            .swiper-button-next,
+        .swiper-button-prev{
+            position: absolute;
+            top: 104px;
+            left: 1090px;
+            @media (max-width: 1199.97px){
+                  @include adaptivValue(left, 1090 , 250 );
+            }
+        }
+        .swiper-button-next, .swiper-button-prev{
+            width: 50px;
+            height: 50px;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after{
+            font-size: 16px;
+        }
+        .swiper-button-prev{
+            left: 990px;
+            @media (max-width: 1199.97px){
+                @include adaptivValue(left, 990 , 200 );
+          }
+        }  
+        }
+        
+        
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+
+    }
+}
+.top-gallary {
+
+    &__ephigraf {
+        &:not(:last-child){
+            margin-bottom: 13px;
+        }
+    }
+
+    &__title {
+        
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+    }
+
+    &__categories {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 35px;
+        row-gap: 10px;
+    }
+}
+
+.categories-gallary {
+
+    &__text {
+    }
+
+    &__list {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        color: inherit;
+  
+  
+        line-height: 1.4;
+        span{
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+            color: $Orange;
+            letter-spacing: 0.05em;
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+                width: 47px;
+                height: 1px;
+                background-color: $Orange;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.slide-gallary {
+
+    &__body-img {
+        margin-bottom: 30px;
+    }
+
+    &__image {
+    
+        position: relative;
+        padding: 0 0 64.15% 0;
+
+    }
+
+    &__link {
+       
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__contant {
+        & *:not(:last-child){
+            margin-bottom: 10px;
+        }
+        
+    }
+
+    &__title {
+        font-size: 22px;
+    }
+
+    &__table {
+        min-width: 160px;
+        display: grid;
+        grid-template-columns: minmax(34px,56px) minmax(37px, 85px);
+        &.text{
+            opacity: 1;
+        }
+    }
+
+    &__button {
+        font-size: 16px;
+    }
+}
+.table-slide {
+    &__label {
+        opacity: 0.7;
+    }
+
+    &__value {
+        opacity: 0.8;
+        font-weight: 500;
+    }
+}
+.button {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
 }
 
