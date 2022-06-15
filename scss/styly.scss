@@ -87,6 +87,25 @@ body._lock{
         background-color: $White;
     }
 }
+.ephigraf{
+    font-family: $SourceSerifPro;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    color: $Orange;
+}
+.title{
+    font-family: $SourceSerifPro;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.3;
+}
+.text{
+    font-weight: 400;
+    opacity: 0.7;
+}
+
 
 /*----------------------------------------------------Header-----------------------------------------------------------------------------*/
 .header {
@@ -654,6 +673,7 @@ body._lock{
 .video {
 
     &__container {
+        min-height: 380px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -667,8 +687,7 @@ body._lock{
 
     &__contant {
 
-        font-family: $SourceSerifPro;
-        font-weight: 600;
+
         & *:not(:last-child){
             margin-bottom: 20px;
         }
@@ -681,19 +700,13 @@ body._lock{
 
     &__ephigraf {
         
-       
-        font-size: 20px;
-        line-height: 1.5;
-        letter-spacing: 1.2px;
-        color: $Orange;
         @media (max-width: 944.97px){
             @include adaptivValue(font-size, 20 , 18 );
         }
     }
 
     &__title {
-        font-size: 44px;
-        line-height: 1.3;
+
         @media (max-width: 944.97px){
             @include adaptivValue(font-size, 44 , 30 );
         }
@@ -702,7 +715,6 @@ body._lock{
 
     &__text {
         font-weight: 400;
-        font-family: $Poppins;
         opacity: 0.7;
         @media (max-width: 944.97px){
             @include adaptivValue(font-size, 16 , 14 );
@@ -721,15 +733,15 @@ body._lock{
         //padding-top: 54px;
         
         //top: 54px;
-        
-        z-index: 3;
-        max-width: 100%;
-        max-height: 100%;
+        border-radius: 15px;
+
+        width: 100%;
+        height: 100%;
         
         @media (min-width: 945px){
             transform: translateY(54px);
-            border-radius: 15px;
             position: relative;
+            z-index: 3;
         }
 
     }
@@ -745,8 +757,8 @@ body._lock{
             
     
             img{
-                max-width: 100%;
-                max-height: 100%;
+                width: 100%;
+                height: 100%;
                 //width: 555px;
                 //height: 326px;
                 border-radius: 10px;
@@ -756,4 +768,113 @@ body._lock{
     }
 }
 
+/*----------------------------------------------feature------------------------------------------------------------------------------------*/
+.page {
+
+    &__feature {
+        padding-bottom: 140px;
+    }
+}
+.feature {
+
+    &__container {
+    }
+
+    &__top {
+        text-align: center;
+        & *:not(:last-child){
+            margin-bottom: 10px;
+        }
+        &:not(:last-child){
+            margin-bottom: 60px;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));;
+        gap: 30px;
+        flex-wrap: wrap;
+        
+    }
+
+    &__item {
+        display: inline-block;
+        padding: 56px 60px;
+        text-align: center;
+        box-shadow: 0px 1px 30px rgba(26, 10, 3, 0.05);
+        border-radius: 10px;
+        &:hover{
+            background: linear-gradient(90deg, rgba(238, 85, 20, 0.1) 1.14%, rgba(238, 85, 20, 0) 133.88%);
+
+        }
+    }
+}
+.top-feature {
+
+    &__ephigraf {
+    }
+
+    &__title {
+    }
+}
+
+.item-feature {
+
+    &__icons {
+        position: relative;
+        min-height: 140px;
+        &:not(:last-child){
+            margin-bottom: 38px;
+        }
+        &::after{
+            content: url('../images/feature/Ellipse.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+    }
+
+    &__icon {
+        min-height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__content {
+    }
+
+    &__title {
+        font-size: 22px;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        color: $Orange;
+        &::after{
+            content: url('../images/feature/arrow.svg');
+            margin-left: 10px;
+        }
+        &:hover{
+            text-decoration: 1px underline $Black;
+        }
+    }
+
+}
 

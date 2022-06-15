@@ -86,6 +86,27 @@ body._lock {
   background-color: #FFFFFF;
 }
 
+.ephigraf {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  color: #EE5514;
+}
+
+.title {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.3;
+}
+
+.text {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
 /*----------------------------------------------------Header-----------------------------------------------------------------------------*/
 .header {
   position: absolute;
@@ -681,6 +702,7 @@ body._lock {
 }
 
 .video__container {
+  min-height: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,11 +723,6 @@ body._lock {
   }
 }
 
-.video__contant {
-  font-family: "Source Serif Pro", serif;
-  font-weight: 600;
-}
-
 .video__contant *:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -717,22 +734,10 @@ body._lock {
   }
 }
 
-.video__ephigraf {
-  font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: 1.2px;
-  color: #EE5514;
-}
-
 @media (max-width: 944.97px) {
   .video__ephigraf {
     font-size: calc(18px + 2 * ((100vw - 320px) / 850));
   }
-}
-
-.video__title {
-  font-size: 44px;
-  line-height: 1.3;
 }
 
 @media (max-width: 944.97px) {
@@ -743,7 +748,6 @@ body._lock {
 
 .video__text {
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
   opacity: 0.7;
 }
 
@@ -760,17 +764,17 @@ body._lock {
 }
 
 .video__movie {
-  z-index: 3;
-  max-width: 100%;
-  max-height: 100%;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 945px) {
   .video__movie {
     -webkit-transform: translateY(54px);
             transform: translateY(54px);
-    border-radius: 15px;
     position: relative;
+    z-index: 3;
   }
 }
 
@@ -788,8 +792,111 @@ body._lock {
             transform: translateX(50px);
   }
   .video__image img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
   }
+}
+
+/*----------------------------------------------feature------------------------------------------------------------------------------------*/
+.page__feature {
+  padding-bottom: 140px;
+}
+
+.feature__top {
+  text-align: center;
+}
+
+.feature__top *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.feature__top:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.feature__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(290px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.feature__item {
+  display: inline-block;
+  padding: 56px 60px;
+  text-align: center;
+  -webkit-box-shadow: 0px 1px 30px rgba(26, 10, 3, 0.05);
+          box-shadow: 0px 1px 30px rgba(26, 10, 3, 0.05);
+  border-radius: 10px;
+}
+
+.feature__item:hover {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.14%, rgba(238, 85, 20, 0.1)), color-stop(133.88%, rgba(238, 85, 20, 0)));
+  background: linear-gradient(90deg, rgba(238, 85, 20, 0.1) 1.14%, rgba(238, 85, 20, 0) 133.88%);
+}
+
+.item-feature__icons {
+  position: relative;
+  min-height: 140px;
+}
+
+.item-feature__icons:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+.item-feature__icons::after {
+  content: url("../images/feature/Ellipse.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item-feature__icon {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item-feature__title {
+  font-size: 22px;
+}
+
+.item-feature__title:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.item-feature__text {
+  font-size: 14px;
+}
+
+.item-feature__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.item-feature__link {
+  font-weight: 500;
+  color: #EE5514;
+}
+
+.item-feature__link::after {
+  content: url("../images/feature/arrow.svg");
+  margin-left: 10px;
+}
+
+.item-feature__link:hover {
+  -webkit-text-decoration: 1px underline #1A0A03;
+          text-decoration: 1px underline #1A0A03;
 }
