@@ -309,16 +309,8 @@ body._lock{
             left: -100%;
             //justify-content: space-between;
             overflow: auto;//прокрутка
-
             ::before{
-                content: "";
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 99px;
-                width: 100%;
-                z-index: 3;
-                
+  
             }
               
         }
@@ -326,7 +318,14 @@ body._lock{
             z-index: 10;
             left: 0;
             ::before{
-                background-color: black
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 99px;
+                width: 100%;
+                z-index: 3;  
+                background-color: rgba(0, 0, 0, 0.9);
             }
         }
        
@@ -1124,6 +1123,35 @@ body._lock{
         @media (min-width:768px){
             width: 458px;  
         }
+        .swiper-button-next,
+        .swiper-button-prev{
+            //left: 680px;
+            //position: absolute;
+            //top: 23px;
+            /*@media (min-width:768px){
+                left: 408px;  
+            }
+            @media (max-width: 767.97px){
+                @include adaptivValue(left, 780 , 240 );
+            }*/
+        }
+        .swiper-button-next, .swiper-button-prev{
+            width: 50px;
+            height: 50px;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after{
+            font-size: 16px;
+        }
+        .swiper-button-prev{
+
+           /* @media (min-width:768px){
+                left: 308px; 
+            }
+            left: 600px;
+            @media (max-width: 766.97px){
+                @include adaptivValue(left, 600 , 170 );
+          }*/
+        }  
       
     }
 
@@ -1141,6 +1169,21 @@ body._lock{
     }
 }
 .slide-testimonials {
+
+    &__body-buttons{
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        top: 0;
+        left: 67.72%;
+        @media (max-width: 767.97px){
+            left: 70%;
+        }
+        @media (max-width: 532.97px){
+            left: 50%;
+        }
+        
+    }
 
     &__image {
         //width: 100px;
@@ -1200,5 +1243,83 @@ body._lock{
         margin-bottom: 8px;
     }
 }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+.page {
+
+    &__sing {
+        padding-bottom: 100px;
+    }
+}
+.sing {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        
+        gap: 10px;
+        @media (max-width: 767.97px){
+              flex-wrap: wrap;
+              justify-content: center;
+        }
+    }
+
+    &__image {
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    &__contant {
+        max-width: 528px;
+        padding: 63px 0;
+
+    }
+
+    &__title {
+        font-size: 31px;
+        line-height: 1.4;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__label {
+    }
+}
+.title {
+}
 .text {
+}
+.label {
+    display: flex;
+    justify-content: space-between;
+
+    &__input {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        padding: 0 0 0 26px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 5px 0 0 5px;
+        
+    }
+
+    &__button {
+        border-radius: 0px 5px 5px 0px;
+    }
+}
+.button {
 }

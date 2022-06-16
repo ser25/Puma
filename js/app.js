@@ -35,6 +35,7 @@ const swiper = new Swiper('.main__slider', {
   });
   const swiperTestimonials = new Swiper('.testimonials__slider', {
     speed: 500,
+    spaceBetween: 10,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
