@@ -1323,3 +1323,98 @@ body._lock{
 }
 .button {
 }
+
+/*----------------------------------------------------------------footer-----------------------------------------------------------------------------------------------*/
+
+.footer {
+
+    &__container {
+    }
+
+    &__top {
+ 
+
+    }
+
+    &__body {
+        padding: 20px 0;
+    }
+
+    &__items {
+        
+    }
+
+    &__item {
+        
+    }
+}
+.item-footer {
+
+    &__body{
+       
+    }
+
+    &__title {
+        width: 100%;
+        text-align: left;
+        background-color: transparent;
+        position: relative;
+        padding: 10px;
+
+    }
+
+    &__link {
+    }
+}
+
+.footer__items._init .item-footer__title{
+    cursor: pointer;
+}
+.footer__items._init .item-footer__title{
+   padding: 10px 40px 10px 10px;
+}
+.footer__items._init .item-footer__title::before,
+.footer__items._init .item-footer__title::after{
+    content: "";
+    width: 20px;
+    height: 1px;
+    background-color: $Orange;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transition: transform 0.3s ease 0s;
+}
+.footer__items._init .item-footer__title::after{
+    transform: rotate(-90deg);
+}
+.footer__items._init .item-footer__title._spoller-active::after{
+    transform: rotate(0deg);
+}
+
+/*------------------------------*/
+.item-footer {
+
+    &__body {
+    }
+
+    &__menu {
+        display: grid;
+    }
+
+    &__link {
+    }
+}
+.menu-footer {
+
+    &__item {
+        
+    }
+}
+
+
+
+
+
+
+
+

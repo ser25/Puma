@@ -1285,3 +1285,55 @@ body._lock {
 .label__button {
   border-radius: 0px 5px 5px 0px;
 }
+
+/*----------------------------------------------------------------footer-----------------------------------------------------------------------------------------------*/
+.footer__body {
+  padding: 20px 0;
+}
+
+.item-footer__title {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  position: relative;
+  padding: 10px;
+}
+
+.footer__items._init .item-footer__title {
+  cursor: pointer;
+}
+
+.footer__items._init .item-footer__title {
+  padding: 10px 40px 10px 10px;
+}
+
+.footer__items._init .item-footer__title::before,
+.footer__items._init .item-footer__title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #EE5514;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.footer__items._init .item-footer__title::after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.footer__items._init .item-footer__title._spoller-active::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+/*------------------------------*/
+.item-footer__menu {
+  display: -ms-grid;
+  display: grid;
+}
