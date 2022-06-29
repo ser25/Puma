@@ -1337,6 +1337,10 @@ body._lock{
         font-size: 18px;
         color: $Black;
         padding-bottom: 20px;
+        @media (max-width: 800.97px){
+            position: relative;
+            padding-top: 50px;
+        }
        
         @media (min-width: 801px){
             display: flex;
@@ -1355,6 +1359,12 @@ body._lock{
 
     &__item {
         
+    }
+    &__images{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 .item-footer {
@@ -1413,6 +1423,9 @@ body._lock{
     &__link {
         color: inherit;
         opacity: 0.7;
+        &:hover{
+                color: $Orange;
+           }
         &_img{
             opacity: 1;
            /* @media (max-width: 800.97px){
@@ -1424,6 +1437,7 @@ body._lock{
             @media (max-width: 800.97px){
                  display: none;
             }
+
 
         }
        
@@ -1441,7 +1455,7 @@ body._lock{
     }
 
     &__link {
-       
+
     }
 }
 .item-footer {

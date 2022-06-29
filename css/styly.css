@@ -1294,6 +1294,13 @@ body._lock {
   padding-bottom: 20px;
 }
 
+@media (max-width: 800.97px) {
+  .footer__top {
+    position: relative;
+    padding-top: 50px;
+  }
+}
+
 @media (min-width: 801px) {
   .footer__top {
     display: -webkit-box;
@@ -1310,6 +1317,14 @@ body._lock {
 
 .footer__body {
   padding: 20px 0;
+}
+
+.footer__images {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .item-footer__title {
@@ -1349,6 +1364,10 @@ body._lock {
 .menu-footer__link {
   color: inherit;
   opacity: 0.7;
+}
+
+.menu-footer__link:hover {
+  color: #EE5514;
 }
 
 .menu-footer__link_img {
