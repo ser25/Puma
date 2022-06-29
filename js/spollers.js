@@ -79,7 +79,6 @@ if(spollersArray.length > 0){
     // Работа с контентом
     function initSpollersBody(spollersBlock, hideSpollerBody = true) {
         const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
-        console.log(spollerTitles);
         if (spollerTitles.length > 0 ) {
             spollerTitles.forEach(spollerTitle => {
                 if (hideSpollerBody){
